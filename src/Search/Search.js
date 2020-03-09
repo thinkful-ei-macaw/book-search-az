@@ -18,11 +18,31 @@ class Search extends React.Component {
 */
   render() {
     return (
-      <h2>Hello world</h2>
+      <div id="search">
+        <form>
+          <label for="search">Search: </label>
+          <input type="text" />
+          <button onClick={(e) => {
+            e.preventDefault();
+            console.log('O hi there')
+          }
+          }>Search</button>
+          <label for="print-type">Print Type: </label>
+          <select>
+            <option value="all">All</option>
+            <option value="ebook">e-Book</option>
+            <option value="physmed">Physical Media</option>
+          </select>
+          <label for="book-type">Book Type: </label>
+          <select>
+            <option value="all">All</option>
+            <option value="fiction">Fiction</option>
+            <option value="nonfic">Non-Fiction</option>
+          </select>
+        </form>
+      </div>
     )
   }
 }
 
-export default {
-  Search
-}
+export default Search;
